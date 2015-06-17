@@ -13,7 +13,7 @@
                 "seq" => [
                     [
                         "action" => "play",
-                        "args" => ["url" => ".$ngrok$soundWelcome."]
+                        "args" => ["url" => ".$appUrl$soundWelcome."]
                     ],
                     [
                         "action" => "gather",
@@ -21,8 +21,8 @@
                             "min_digits" => 1,
                             "max_digits" => 1,
                             "max_attempts" => 3,
-                            "ask" => ".$ngrok$soundDecralation.",
-                            "play_on_error"  => ".$ngrok$soundWrongKey.",
+                            "ask" => ".$appUrl$soundDecralation.",
+                            "play_on_error"  => ".$appUrl$soundWrongKey.",
                             "variable_name" => "returnVal"
                         ]
                     ]
@@ -39,7 +39,7 @@
                 "seq" => [
                     [
                         "action" => "play",
-                        "args" => ["url" => ".$ngrok$soundClosing."]
+                        "args" => ["url" => ".$appUrl$soundClosing."]
                     ],
                     [
                         "action" => "dial",
