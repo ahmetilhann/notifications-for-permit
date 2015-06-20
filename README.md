@@ -13,7 +13,7 @@ Numara DB' ye önceden eklenmiş ise numaranın son aramada verdiği cevap alın
 - Sonra eklenen dosyanın adresi BFXM' e tanıtılmalıdır.
 
 ### Version
-3.0.0
+4.5.0
 
 # MySQL Sorguları
 DB oluşturmak
