@@ -13,7 +13,7 @@
                 "seq" => [
                     [
                         "action" => "play",
-                        "args" => ["url" => ".$appUrl$soundWelcome."]
+                        "args" => ["url" => ".$soundWelcome."]
                     ],
                     [
                         "action" => "gather",
@@ -21,8 +21,8 @@
                             "min_digits" => 1,
                             "max_digits" => 1,
                             "max_attempts" => 3,
-                            "ask" => ".$appUrl$soundDecralation.",
-                            "play_on_error"  => ".$appUrl$soundWrongKey.",
+                            "ask" => ".$soundDecralation.",
+                            "play_on_error"  => ".$soundWrongKey.",
                             "variable_name" => "returnVal"
                         ]
                     ]
@@ -39,7 +39,7 @@
                 "seq" => [
                     [
                         "action" => "play",
-                        "args" => ["url" => ".$appUrl$soundClosing."]
+                        "args" => ["url" => ".$soundClosing."]
                     ],
                     [
                         "action" => "dial",
