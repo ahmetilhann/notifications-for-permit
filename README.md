@@ -1,9 +1,9 @@
 # notifications-for-permit
 1 Mayıs 2015'te yürürlüğe giren ELEKTRONİK TİCARETİN DÜZENLENMESİ HAKKINDAKİ kanunun gereğince kullanıcılara izinsiz bildirim göndermek yasaklandı.
-Bu uygulama [bulutfon] müşterileri için kişilerin bildirim alma isteklerini liste halinde database' e kaydeder. Daha sonra database deki listeleri istediğimiz gibi kullanabiliriz.
+Bu uygulama [Bulutfon] müşterileri için kişilerin bildirim alma isteklerini liste halinde database' e kaydeder. Daha sonra database deki listeleri istediğimiz gibi kullanabiliriz.
 
 # Uygulama Nasıl Çalışır?
-Uygulama bir [bfxm] uygulmasıdır. Numara sahibi [bfxm]' e yönlendirilmiş [bulutfon] numaralarından birini arar. Otomatik yönlendirmeler devreye girer.
+Uygulama bir [BFXM] uygulmasıdır. Numara sahibi [BFXM]' e yönlendirilmiş [Bulutfon] numaralarından birini arar. Otomatik yönlendirmeler devreye girer.
 Kullanıcıdan bildirim almak istiyorsa 1'e istemiyorsa 2' ye basması istenir. Alınan veriler DB' ye numara, cevap ve tarih olarak yazılır.
 Numara DB' ye önceden eklenmiş ise numaranın son aramada verdiği cevap alınır. Aynı numaranın birden fazla kayıt bırakması engellenmiş olunur.
 
@@ -27,7 +27,7 @@ kısımlarına eklenmelidir.
 -Daha sonra bulutfon hesabınızdan [BFXM oluşturmalı] ve bir numaraya yönledirmelisiniz.
 
 ### Version
-5.0.0
+1.5.0
 
 # MySQL Sorguları
 DB oluşturmak
@@ -58,7 +58,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-[bulutfon]:https://www.bulutfon.com/
-[bfxm]:https://github.com/bulutfon/documents/tree/master/BFXM
+[Bulutfon]:https://www.bulutfon.com/
+[BFXM]:https://github.com/bulutfon/documents/tree/master/BFXM
 [BFXM oluşturmalı]:https://www.youtube.com/watch?v=4DeFu8JvG3o
 
