@@ -1,63 +1,41 @@
 <?php
-    include('constants.php');
-    include('connect.php');
 
-    $step = isset($_POST['step']) ? $_POST['step'] : 1;
-    $caller = isset($_POST['caller']) ? $_POST['caller'] : false;
-    $returnVal = isset($_POST['returnVal']) ? $_POST['returnVal'] : false;
+require_once 'constants.php';
+require_once 'connect.php';
+require_once 'vendor/autoload.php';
 
-    switch($step){
-        case 1:
-            $answer = [
-                "bfxm" => ["version" => 1],
-                "seq" => [
-                    [
-                        "action" => "play",
-                        "args" => ["url" => ".$soundWelcome."]
-                    ],
-                    [
-                        "action" => "gather",
-                        "args" => [
-                            "min_digits" => 1,
-                            "max_digits" => 1,
-                            "max_attempts" => 3,
-                            "ask" => ".$soundDecralation.",
-                            "play_on_error"  => ".$soundWrongKey.",
-                            "variable_name" => "returnVal"
-                        ]
-                    ]
 
-                ]
-            ];
-            header('Content-Type: application/json');
-            echo json_encode($answer);
-            break;
+use Xuma\Bfxm\Builder;
 
-        case 2:
-            $answer = [
-                "bfxm" => ["version" => 1],
-                "seq" => [
-                    [
-                        "action" => "play",
-                        "args" => ["url" => ".$soundClosing."]
-                    ],
-                    [
-                        "action" => "dial",
-                        "args" => ["destination" => 10]
-                    ]
+$step = isset($_POST['step']) ? $_POST['step'] : 1;
+$caller = isset($_POST['caller']) ? $_POST['caller'] : false;
+$returnVal = isset($_POST['returnVal']) ? $_POST['returnVal'] : false;
 
-                ]
-            ];
+switch ($step) {
+    case 1:
+        $bfxm = new Builder();
+        $bfxm->play($soundWelcome)
+            ->gather([
+            "min_digits" => 1,
+            "max_digits" => 1,
+            "max_attempts" => 3,
+            "ask" => ".$soundDecralation.",
+            "play_on_error"  => ".$soundWrongKey.",
+            "variable_name" => "returnVal"])
+            ->build(true);
+        break;
 
-            header('Content-Type: application/json');
-            echo json_encode($answer);
+    case 2:
+        $bfxm = new Builder();
+        $bfxm->play($soundClosing)
+            ->dial(10)
+            ->build(true);
 
-            $connect = new connect($servername, $dbname, $username, $password);
-            $connect->insert($caller, $returnVal);
-            break;
+        $connect = new connect($servername, $dbname, $username, $password);
+        $connect->insert($caller, $returnVal);
+        break;
 
-        default:
-            die("Unexpected Error!!");
-            break;
-
-    }
+    default:
+        die("Unexpected Error!!");
+        break;
+}

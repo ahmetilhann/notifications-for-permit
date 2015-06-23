@@ -1,7 +1,7 @@
 <?php
 
     #Sounds and url(source) address
-    $appUrl = "http://9860deda.ngrok.io/odev3/"; //Source
+    $appUrl = "http://5df55654.ngrok.io/homework/"; //Source
     $soundWelcome = $appUrl."sounds/welcome.mp3"; //Welcome massage sound address
     $soundDecralation = $appUrl."sounds/decralation_question.mp3"; //Decralation massage sound address
     $soundWrongKey = $appUrl."sounds/wrong_keying.mp3"; //Wrong keying massage sound address
