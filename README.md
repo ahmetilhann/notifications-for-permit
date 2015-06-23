@@ -1,4 +1,4 @@
-# notifications-for-permit
+# İzinli Veritabanı Oluşturma 
 1 Mayıs 2015'te yürürlüğe giren ELEKTRONİK TİCARETİN DÜZENLENMESİ HAKKINDAKİ kanunun gereğince kullanıcılara izinsiz bildirim göndermek yasaklandı.
 Bu uygulama [Bulutfon] müşterileri için kişilerin bildirim alma isteklerini liste halinde database' e kaydeder. Daha sonra database deki listeleri istediğimiz gibi kullanabiliriz.
 
@@ -18,13 +18,13 @@ $appUrl = "DOSYANIN ADRESİ";
 ```
   kısmına eklenmelidir.
 - Veri tabanını verilen SQL kodlarıya MYSQL' de oluşturabilirsiniz.
-- veri tabanı için oluşturduğunuz kullanıcı adı ve şifreyi constants.php içerisinde
+- Veri tabanı için oluşturduğunuz kullanıcı adı ve şifreyi constants.php içerisinde
 ```sh
 $username = "KULLANICI ADI";
 $password = "ŞİFRE";
 ```
 kısımlarına eklenmelidir.
--Daha sonra bulutfon hesabınızdan [BFXM oluşturmalı] ve bir numaraya yönledirmelisiniz.
+- Daha sonra bulutfon hesabınızdan [BFXM oluşturmalı] ve bir numaraya yönledirmelisiniz.
 
 ### Version
 1.5.0
